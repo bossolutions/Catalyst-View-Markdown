@@ -135,7 +135,6 @@ sub process {
         return 0;
     }
 
-    local $@;
     my $output = eval { $self->render($c, $mdfile) };
 
     unless ( $c->response->content_type ) {
